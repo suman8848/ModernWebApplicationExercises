@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Details</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>Below are the user records: </p>
+    <div class="divTable" style="width: 100%;border: 1px solid #000;" >
+        <div class="divTableBody">
+        <div class="divTableRow">
+        <div class="divTableCell">ID</div>
+        <div class="divTableCell">Name</div>
+        <div class="divTableCell">Username</div>
+        <div class="divTableCell">Email</div>
+        <div class="divTableCell">City</div>
+        <div class="divTableCell">Zip Code</div>
+        <div class="divTableCell">Latitude</div>
+        <div class="divTableCell">Longitude</div>
+        <div class="divTableCell">Website</div>
+        </div>
+        <% users.forEach(function(user){ %>
+        <div class="divTableRow">
+        <div class="divTableCell"><%= user.id %></div>
+        <div class="divTableCell"><%= user.name %></div>
+        <div class="divTableCell"><%= user.username %></div>
+        <div class="divTableCell"><%= user.email %></div>
+        <div class="divTableCell"><%= user.address.city %></div>
+        <div class="divTableCell"><%= user.address.zipcode %></div>
+        <div class="divTableCell"><%= user.address.geo.lat %></div>
+        <div class="divTableCell"><%= user.address.geo.lng %></div>
+        <div class="divTableCell"><%= user.website %></div>
+        </div>
+        <% }); %>
+        </div>
+        </div>
+  </body>
+</html>
