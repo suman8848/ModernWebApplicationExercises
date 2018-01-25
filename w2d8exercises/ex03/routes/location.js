@@ -18,10 +18,10 @@ let checkOp = [
 	check('name').exists(),
 	check('category').exists(),
 	check('location').exists(),
-  	check('name', 'name must be atleast one character').isLength({ min: 1 }),
-  	check('category', 'category must be atleast one character').isLength({ min: 1 }),
-  	check('location.0', 'longitude must be atleast present').isLength({ min: 1 }),
-  	check('location.1', 'latitude must be atleast present').isLength({ min: 1 }),
+  	check('name', 'should have at least  one character').isLength({ min: 1 }),
+  	check('category', 'should have at least one character').isLength({ min: 1 }),
+  	check('location.0', 'longitude must be at least present').isLength({ min: 1 }),
+  	check('location.1', 'latitude must be at least present').isLength({ min: 1 }),
 ];
 
 let checkSearch = [
