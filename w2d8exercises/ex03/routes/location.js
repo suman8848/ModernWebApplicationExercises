@@ -5,7 +5,7 @@ const { check, validationResult } = require('express-validator/check');
 const { matchedData, sanitize } = require('express-validator/filter');
 const db = require('../util/db');
 
-let router = express.Router();
+const router = express.Router();
 
  
 // Collection Name
@@ -33,7 +33,7 @@ let checkSearch = [
 router.get('/', function(req, res, next) {
 
 	let collection = db.get().collection(collectionName);
-  	
+
 	collection.find().limit(100).toArray(function(err, docs) {
 	    res.send(docs);
 	})

@@ -35,5 +35,5 @@ const find = data => tree => {
     return res;
 }
 
-console.log(find("paper.pdf")(tree));
+console.log(find("paper.pdf")(tr ee));
 console.log(find("randomfile")(tree));
