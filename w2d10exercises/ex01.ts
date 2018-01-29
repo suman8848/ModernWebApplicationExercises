@@ -10,7 +10,7 @@ class Car {
 	}
 }
 
-var car = new Car("BMW");
+let car = new Car("BMW");
 car.honk();
 console.log(car.acceleration);
 car.accelerate(60);
