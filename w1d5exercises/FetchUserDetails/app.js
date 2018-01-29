@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', index);
 
-app.get('/',(req, res)=>res.send("<h1>Go to /users page to view details.</h1>"));
+  app.get('/',(req, res)=>res.send("<h1>Go to /users page to view details.</h1>"));
 
 var userController = require('./controller/userController');
 app.get('/users',userController.getUsers);
